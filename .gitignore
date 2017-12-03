@@ -1,0 +1,22 @@
+# Gradle
+
+.gradle
+/build
+/subprojects/*/build
+/out
+/subprojects/*/out
+!gradle-wrapper.jar
+
+# IDEA
+
+.idea
+.shelf
+*.iml
+*.ipr
+*.iws
+/subprojects/*/.iml
+
+# General
+
+/log
+*.log
