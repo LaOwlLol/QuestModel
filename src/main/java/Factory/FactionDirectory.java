@@ -7,6 +7,7 @@ import Types.FactionType;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +25,8 @@ public class FactionDirectory implements Directory {
     }
 
     @Override
-    public void GenerateAssets() {
-        try (Stream<String> data = Files.lines(Paths.get("src/main/resources/Factions.data"))) {
+    public void GenerateAssets(Path source) {
+        try (Stream<String> data = Files.lines(source)) {
             data.map((line) -> {
                 String[] row = line.split(",");
                 return new Faction(row[0], FactionType.valueOf(row[1]));
