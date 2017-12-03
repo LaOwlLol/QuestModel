@@ -1,6 +1,6 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 import Types.LootSlotType;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class Loot extends GameObject {
     protected List<Effect> effects;
 
     public Loot(String name, String description, LootSlotType slotType) {
-        super(CriteriaType.Loot);
+        super(GameObjectType.Loot);
         this.name = name;
         this.description = description;
         this.slotType = slotType;

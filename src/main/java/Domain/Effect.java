@@ -1,6 +1,6 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 import Types.EffectBaseType;
 import Types.EffectMechanicType;
 
@@ -13,7 +13,7 @@ public class Effect extends GameObject {
     protected int duration;
 
     public Effect(String name, EffectMechanicType mechanicType, EffectBaseType baseType, int value, int duration) {
-        super(CriteriaType.Effect);
+        super(GameObjectType.Effect);
         this.name = name;
         this.mechanicType = mechanicType;
         this.baseType = baseType;

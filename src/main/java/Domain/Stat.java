@@ -1,6 +1,6 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 import Types.StatType;
 
 public class Stat extends GameObject {
@@ -9,7 +9,7 @@ public class Stat extends GameObject {
     protected int value;
 
     public Stat(StatType type, int value) {
-        super(CriteriaType.Stat);
+        super(GameObjectType.Stat);
         this.statType = type;
         this.value = value;
     }

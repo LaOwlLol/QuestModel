@@ -1,19 +1,19 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 
 public class GameObject {
-    protected CriteriaType criteriaType;
+    protected GameObjectType gameObjectType;
 
-    public GameObject(CriteriaType criteriaType) {
-        this.criteriaType = criteriaType;
+    public GameObject(GameObjectType gameObjectType) {
+        this.gameObjectType = gameObjectType;
     }
 
-    public CriteriaType getCriteriaType() {
-        return criteriaType;
+    public GameObjectType getGameObjectType() {
+        return gameObjectType;
     }
 
-    public void setType(CriteriaType type) {
-        this.criteriaType = type;
+    public void setType(GameObjectType type) {
+        this.gameObjectType = type;
     }
 }

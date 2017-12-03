@@ -1,5 +1,5 @@
 package Types;
 
-public enum CriteriaType {
+public enum GameObjectType {
     Quest, Loot, Effect, Stat, Faction
 }

@@ -1,6 +1,6 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 import Types.FactionType;
 
 public class Faction extends GameObject implements FactionAligned {
@@ -8,7 +8,7 @@ public class Faction extends GameObject implements FactionAligned {
     protected FactionType factionType;
 
     public Faction(String name, FactionType factionType) {
-        super(CriteriaType.Faction);
+        super(GameObjectType.Faction);
         this.name = name;
         this.factionType = factionType;
     }

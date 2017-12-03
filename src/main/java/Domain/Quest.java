@@ -1,6 +1,6 @@
 package Domain;
 
-import Types.CriteriaType;
+import Types.GameObjectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Quest extends GameObject{
     protected List<QuestResult> results;
 
     public Quest(String name, String description) {
-        super(CriteriaType.Quest);
+        super(GameObjectType.Quest);
         this.name = name;
         this.description = description;
         this.results = new ArrayList<QuestResult>();

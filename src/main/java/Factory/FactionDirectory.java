@@ -1,14 +1,13 @@
 package Factory;
 
+import Domain.Criteria;
 import Domain.Faction;
 import Domain.GameObject;
-import Types.CriteriaType;
 import Types.FactionType;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,11 +37,13 @@ public class FactionDirectory implements Directory {
 
     @Override
     public List<GameObject> Distribute(int[] assetIDs) {
+        //TODO Distribute selected IDs
         return factions.values().stream().collect(Collectors.toList());
     }
 
     @Override
-    public Integer[] Search(CriteriaType[] criteria) {
+    public Integer[] Search(Criteria[] criteria) {
+        //TODO filter by criteria.
         return factions.keySet().toArray(new Integer[0]);
     }
 
