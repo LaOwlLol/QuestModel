@@ -25,7 +25,7 @@ public class FactionDirectory implements Directory {
 
     @Override
     public void GenerateAssets() {
-        try (Stream<String> data = Files.lines(Paths.get("Dev/src/main/resources/Factions.data"))) {
+        try (Stream<String> data = Files.lines(Paths.get("src/main/resources/Factions.data"))) {
             data.map((line) -> {
                 String[] row = line.split(",");
                 return new Faction(row[0], FactionType.valueOf(row[1]));
@@ -44,6 +44,5 @@ public class FactionDirectory implements Directory {
     public Integer[] Search(CriteriaType[] criteria) {
         return factions.keySet().toArray(new Integer[0]);
     }
-
 
 }
