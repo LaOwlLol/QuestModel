@@ -9,5 +9,5 @@ import java.util.List;
 public interface Directory {
     void GenerateAssets(Path source);
     List<GameObject> Distribute(int[] assetIDs);
-    Integer[] Search(Criteria[] criteria);
+    List<GameObject> Search(Criteria[] criteria);
 }

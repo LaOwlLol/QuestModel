@@ -8,6 +8,7 @@ import Types.FactionType;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,9 +43,11 @@ public class FactionDirectory implements Directory {
     }
 
     @Override
-    public Integer[] Search(Criteria[] criteria) {
+    public List<GameObject> Search(Criteria[] criteria) {
         //TODO filter by criteria.
-        return factions.keySet().toArray(new Integer[0]);
+        return factions.values().stream().filter((f) ->
+           Arrays.stream(criteria).map((c)-> c.isMatch(f)).reduce(Boolean::logicalOr).isPresent()
+        ).collect(Collectors.toList());
     }
 
 }
